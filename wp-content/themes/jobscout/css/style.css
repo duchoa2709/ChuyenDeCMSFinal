@@ -1,0 +1,3 @@
+.banner-caption .jobscout_job_filters .search_jobs div.filter_first, .banner-caption .jobscout_job_filters .search_jobs div.search_keywords, .banner-caption .jobscout_job_filters .search_jobs div.filter_last, .banner-caption .jobscout_job_filters .search_jobs div.search_location {
+    flex: none!important;
+  }

@@ -18,8 +18,8 @@ if( $ed_banner && has_custom_header() ){ ?>
                 <div class="container">
                     <div class="caption-inner">
                         <?php 
-                            if( $banner_title ) echo '<h2 class="title">' . esc_html( $banner_title ) . '</h2>';
-                            if( $banner_subtitle ) echo '<div class="description">' . wpautop( wp_kses_post( $banner_subtitle ) ) . '</div>';
+                            if( $banner_title ) echo '<h2 class="title text-left text-3xl font-normal ">' . esc_html( $banner_title ) . '</h2>';
+                            if( $banner_subtitle ) echo '<div class="description text-left">' . wpautop( wp_kses_post( $banner_subtitle ) ) . '</div>';
                         ?>
                         <div class="form-wrap">
                             <div class="search-filter-wrap">
@@ -28,7 +28,7 @@ if( $ed_banner && has_custom_header() ){ ?>
                                     if( $find_a_job_link ){
                                         get_template_part('template-parts/header','form');
                                     }else{
-                                         get_search_form();
+                                        get_search_form();
                                     }
                                 }else{
                                     get_search_form();
