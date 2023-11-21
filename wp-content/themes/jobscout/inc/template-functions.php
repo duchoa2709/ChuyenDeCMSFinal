@@ -25,7 +25,6 @@ function jobscout_head(){ ?>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <?php
 }
@@ -514,9 +513,10 @@ function jobscout_footer_top(){
     }
                  
     if( $active_sidebars ){ ?>
+    <?php get_template_part( 'template-parts/contactForm7/contactForm7' ); ?>
         <div class="footer-t">
-    		<div class="container">
-    			<div class="grid column-<?php echo esc_attr( $sidebar_count ); ?>">
+    		<div class="container flex-col justify-center">
+    			<div class="m-auto ">
                 <?php foreach( $active_sidebars as $active ){ ?>
     				<div class="col">
     				   <?php dynamic_sidebar( $active ); ?>	
@@ -544,8 +544,6 @@ function jobscout_footer_bottom(){ ?>
 			<div class="copyright">            
             <?php
                 jobscout_get_footer_copyright();
-                jobscout_ed_author_link();
-                jobscout_ed_wp_link();
             ?>               
             </div>
 		</div>

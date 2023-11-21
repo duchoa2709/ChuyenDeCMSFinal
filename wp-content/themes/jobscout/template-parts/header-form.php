@@ -41,78 +41,78 @@ echo '<option value="' . esc_attr($meta_value) . '">' . esc_html($meta_value) . 
 
 ?>
 <style>
-    .banner-caption .jobscout_job_filters .search_jobs div.search_keywords {
-        display: unset;
-    }
+.banner-caption .jobscout_job_filters .search_jobs div.search_keywords {
+    display: unset;
+}
 
-    .banner-caption .jobscout_job_filters .search_jobs div.search_keywords,
-    .banner-caption .jobscout_job_filters .search_jobs div.filter_last,
-    .banner-caption .jobscout_job_filters .search_jobs div.search_location {
-        align-items: center;
-    }
+.banner-caption .jobscout_job_filters .search_jobs div.search_keywords,
+.banner-caption .jobscout_job_filters .search_jobs div.filter_last,
+.banner-caption .jobscout_job_filters .search_jobs div.search_location {
+    align-items: center;
+}
 
-    .banner-caption .jobscout_job_filters .search_jobs {
-        border-radius: 0px;
-    }
+.banner-caption .jobscout_job_filters .search_jobs {
+    border-radius: 0px;
+}
 
-    .search_home {
-        padding: 20px;
-        background-color: rgba(46, 46, 46, 0.5);
-    }
+.search_home {
+    padding: 20px;
+    background-color: rgba(46, 46, 46, 0.5);
+}
 
-    .banner-caption .jobscout_job_filters .search_jobs input[type="submit"] {
-        padding: 0;
-        width: 80px;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        background-position: center;
-        text-indent: 90px;
-        overflow: hidden;
-        border-left: 1px solid rgba(0, 0, 0, 0.1);
-    }
+.banner-caption .jobscout_job_filters .search_jobs input[type="submit"] {
+    padding: 0;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    text-indent: 90px;
+    overflow: hidden;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-    .banner-caption .jobscout_job_filters .search_jobs input[type="submit"]:hover {
-        background-color: #fff;
-    }
+.banner-caption .jobscout_job_filters .search_jobs input[type="submit"]:hover {
+    background-color: #fff;
+}
 
-    button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-        border: none;
-        background: none;
-        white-space: nowrap;
-        color: #fff;
-    }
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    border: none;
+    background: none;
+    white-space: nowrap;
+    color: #fff;
+}
 
-    button:hover,
-    input[type="button"]:hover,
-    input[type="reset"]:hover,
-    input[type="submit"]:hover {
-        background: #b95307;
-        color: #fff;
-    }
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background: #b95307;
+    color: #fff;
+}
 
-    .banner-caption .caption-inner {
-        /* max-width: 770px; */
-        margin-left: auto;
-        margin-right: auto;
-    }
+.banner-caption .caption-inner {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: 6fr 3fr 1fr;
-        gap: 10px;
-    }
+.gridForm {
+    display: grid;
+    grid-template-columns: 6fr 3fr 1fr;
+    gap: 10px;
+}
 
-    .job-manager-category-dropdown:focus {
-        outline: none;
-    }
+.job-manager-category-dropdown:focus {
+    outline: none;
+}
 </style>
 <div class="job_listings">
     <form class="jobscout_job_filters" method="GET" action="<?php echo esc_url( $action_page ) ?>">
         <div class="search_jobs">
-            <div class="w-full flex search_home grid">
+            <div class="w-full flex search_home gridForm">
                 <div class="search_keywords pl-4 w-3/5">
                     <div class="flex bg-white items-center px-5 border-2">
                         <label for="search_keywords"><?php esc_html_e( 'Keywords', 'jobscout' ); ?></label>

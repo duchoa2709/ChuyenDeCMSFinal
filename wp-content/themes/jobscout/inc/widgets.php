@@ -32,21 +32,6 @@ function jobscout_widgets_init(){
             'name'        => __( 'Footer One', 'jobscout' ),
             'id'          => 'footer-one', 
             'description' => __( 'Add footer one widgets here.', 'jobscout' ),
-        ),
-        'footer-two'=> array(
-            'name'        => __( 'Footer Two', 'jobscout' ),
-            'id'          => 'footer-two', 
-            'description' => __( 'Add footer two widgets here.', 'jobscout' ),
-        ),
-        'footer-three'=> array(
-            'name'        => __( 'Footer Three', 'jobscout' ),
-            'id'          => 'footer-three', 
-            'description' => __( 'Add footer three widgets here.', 'jobscout' ),
-        ),
-        'footer-four'=> array(
-            'name'        => __( 'Footer Four', 'jobscout' ),
-            'id'          => 'footer-four', 
-            'description' => __( 'Add footer four widgets here.', 'jobscout' ),
         )
     );
     
