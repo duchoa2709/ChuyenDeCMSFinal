@@ -3304,11 +3304,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: 0;
   }
   
-  .site-main article .entry-content p {
-	display: table;
-	width: 100%;
-  }
-  
   a.readmore-link {
 	font-size: 0.888em;
 	font-weight: 400;

@@ -36,65 +36,65 @@ $qry = new WP_Query( $args );
 
 if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
 <section class="bg-gray-200">
-       <div class="container mx-auto p-10 ">
-     
-       <div class="text-center">
-       <?php
-           if( $blog_heading ) echo '<h2 class="text-xl font-bold my-5">' . esc_html( $blog_heading ) . '</h2>';
+    <div class="container mx-auto p-10 ">
+
+        <div class="text-center">
+            <?php
+           if( $blog_heading ) echo '<h2 class="text-4xl font-bold my-5">' . esc_html( $blog_heading ) . '</h2>';
            // if( $sub_title ) echo '<div class="section-desc">' . wpautop( wp_kses_post( $sub_title ) ) . '</div>';
        ?>
 
 
-       </div>
-       <?php if( $qry->have_posts() ){ ?>
-          <div class="article-wrap  grid grid-cols-2 gap-4">
-               <?php
+        </div>
+        <?php if( $qry->have_posts() ){ ?>
+        <div class="article-wrap  grid grid-cols-2 gap-4" >
+            <?php
                while( $qry->have_posts() ){
                    $qry->the_post(); ?>
-                     <?php
+            <?php
                               if (has_post_thumbnail()) {
                                $thumbnail_id = get_post_thumbnail_id();
                                $thumbnail_url = wp_get_attachment_url($thumbnail_id);
                             
                            }
-                              ?>  
-                       <div class="p-4 w-full flex bg-white m-3 ">
-                           <div  class="w-1/2 h-full " >
-                               <a href="<?php the_permalink(); ?>">
-                               <img class="w-full h-full" src="<?php echo  $thumbnail_url ?>" alt="">
-                               </a>
-                           </div>
-                           <div class="h-full w-1/2 p-2 flex flex-col pl-5 ">
-                               <div>
-                                   <h1 class="text-base font-medium"><?php the_title(); ?></h1>
-                                   <div class="content_text text-base line-clamp-2">
-                                   <?php the_content() ?>   
-                                   </div>
-                                                 
-                               </div>
-                               <a href="<?php the_permalink(); ?>" class=" text-orange-500  text-sm" href="">Read More</a>
-                           </div>
-                          
-                       </div>
-          
-                   <?php
+                              ?>
+            <div class="p-4 w-full flex bg-white m-3 ">
+                <div class="w-1/2 h-full ">
+                    <a href="<?php the_permalink(); ?>">
+                        <img class="w-full h-full" src="<?php echo  $thumbnail_url ?>" alt="">
+                    </a>
+                </div>
+                <div class="h-full w-1/2 p-2 flex flex-col pl-5 ">
+                    <div>
+                        <h1 class="font-bold text-2xl mb-4"><?php the_title(); ?></h1>
+                        <div class="content_text text-base line-clamp-2">
+                            <?php the_content() ?>
+                        </div>
+                    </div>
+                    <div class="text-[#eb8538] font-bold text-base mt-3 ">
+                        <a href="<?php the_permalink(); ?>" href="">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <?php
                }
                wp_reset_postdata();
                ?>
-           </div><!-- .article-wrap -->
-          
-           <!-- <?php if( $blog && $label ){ ?>
+        </div><!-- .article-wrap -->
+
+        <!-- <?php if( $blog && $label ){ ?>
                <div class="btn-wrap">
                    <a href="<?php the_permalink( $blog ); ?>" class="btn"><?php echo esc_html( $label ); ?></a>
                </div>
            <?php } ?> -->
-      
-       <?php } ?>
-                 
-                      
-                  
-   </div>
+
+        <?php } ?>
+
+
+
+    </div>
 </section>
 <?php
 }
-

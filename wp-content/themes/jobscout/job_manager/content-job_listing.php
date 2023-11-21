@@ -26,6 +26,14 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 
 
 ?>
+<style>
+
+.google_map_link {
+    text-decoration: none!important;
+}
+
+</style>
+
 <article <?php job_listing_class(); ?> data-longitude="<?php echo esc_attr( $post->geolocation_lat ); ?>"
     data-latitude="<?php echo esc_attr( $post->geolocation_long ); ?>">
 
@@ -44,8 +52,8 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
                                 class="text-[10px]  text-gray-400 font-normal ">Created. Oct 20,2022</span></p>
                     </div>
                 </div>
-                <div class="w-fit bg-[#eeeeee]">
-                    <div class=" item flex h-6   items-center ">
+                <div class="w-fit bg-[#eeeeee] flex">
+                    <div class=" item flex h-6 items-center ">
                         <div
                             class="text-[10px]  justify-center flex items-center font-light  p-1 w-16   h-10  text-center">
                             <p
@@ -77,7 +85,7 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 
 				if( $job_salary ){
                     echo '<div class="salary-amt">
-                        <span class="salary text-xs text-black-300 ">'. ( $job_salary ) .'</span>
+                        <span class="salary text-xs text-black-300  ">'. ( $job_salary ) .'</span>
                     </div>';
                 }
 			?>

@@ -8,6 +8,7 @@
 $job_title         = get_theme_mod( 'job_posting_section_title', __( 'Job Posting', 'jobscout' ) );
 $ed_jobposting     = get_theme_mod( 'ed_jobposting', true );
 $count_posts       = wp_count_posts('job_listing'); 
+$site_url          = home_url();
 if ( $ed_jobposting && jobscout_is_wp_job_manager_activated() && $job_title  ) {
     ?>
     <section id="job-posting-section" class="top-job-section">
@@ -22,6 +23,9 @@ if ( $ed_jobposting && jobscout_is_wp_job_manager_activated() && $job_title  ) {
                     </div>
                 <?php } 
             ?>
+        </div>
+        <div class="flex justify-center mt-5">
+            <a href="<?php echo $site_url ?>/jobs" class="text-[#eb8538] py-4 px-10 text-base border-2 border-[#eb8538] font-bold"> VIEW MORE JOBS </a>
         </div>
     </section>
     <?php

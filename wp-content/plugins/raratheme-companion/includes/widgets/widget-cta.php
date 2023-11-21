@@ -103,8 +103,10 @@ class RaraThemes_Companion_Cta extends WP_Widget {
         ?>        
         <div class="<?php echo esc_attr( $button_alignment . $ctaclass ); ?>"<?php echo $bg;?>>
             <div class="raratheme-cta-container">
+                <div class="mb-10 text-3xl">
                 <?php
                 if( $title ) echo $args['before_title'] . apply_filters( 'widget_title', $title, $instance, $this->id_base ) . $args['after_title']; ?>
+                </div>
                 <div class="text-holder">
                         <?php if( $content ) echo wpautop( wp_kses_post( $content ) ); ?>
                     <div class="button-wrap">

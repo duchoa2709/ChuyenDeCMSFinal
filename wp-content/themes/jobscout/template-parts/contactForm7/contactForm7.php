@@ -1,11 +1,11 @@
 <style>
 .contentFooter {
-    max-width: 1000px;
+    max-width: 1280px;
     margin: auto;
 }
 
 .inputEmail input[type="submit"] {
-    font-weight: 800;
+    font-weight: 500;
     color: #fff;
     font-size: 20px;
     line-height: 2rem;/* 32px */
@@ -14,6 +14,7 @@
     border-color: #fff;
     border-radius: 0;
     background-color: transparent;
+    padding: 8px 35px;
 }
 
 .emailAndIcon p{
@@ -21,7 +22,7 @@
     display: flex;
     align-items: center;
     border-radius: 0;
-    padding: 0 10px;
+    padding: 0 20px;
     width: 100%;
 }
 
