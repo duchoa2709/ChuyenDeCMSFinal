@@ -77,7 +77,7 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 
 				if( $job_salary ){
                     echo '<div class="salary-amt">
-                        <span class="salary text-xs text-black-300">'. ( $job_salary ) .'</span>
+                        <span class="salary text-xs text-black-300 ">'. ( $job_salary ) .'</span>
                     </div>';
                 }
 			?>
@@ -89,15 +89,12 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
                     <p class="text-xs text-black-300"><?php the_job_location( true ); ?> </p>
                 </div>
             </h1>
+
             <h1
                 class=" py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[9px]  text-black-300   ">
-                <?php
-	                $job_salary = the_job_salary('', '', false);
-	                if ( ! empty( $job_salary ) ) : ?>
-                    <p class="text-xs text-black-300"><?php echo ( $job_salary ); ?></p>
-                    <?php
-	                endif;
-	            ?>
+                <div class="company-address">
+                    <p class="text-xs text-black-300"><?php the_job_publish_date(); ?> </p>
+                </div>
             </h1>
         </div>
     </div>
