@@ -779,12 +779,12 @@ function the_job_publish_date( $post = null ) {
 function get_the_job_publish_date( $post = null ) {
 	$date_format = get_option( 'job_manager_date_format' );
 
-	if ( 'default' === $date_format ) {
+	// if ( 'default' === $date_format ) {
 		return wp_date( get_option( 'date_format' ), get_post_datetime()->getTimestamp() );
-	} else {
-		// translators: Placeholder %s is the relative, human readable time since the job listing was posted.
-		return sprintf( __( 'Posted %s ago', 'wp-job-manager' ), human_time_diff( get_post_timestamp(), time() ) );
-	}
+	// } else {
+	// 	// translators: Placeholder %s is the relative, human readable time since the job listing was posted.
+	// 	return sprintf( __( 'Posted %s ago', 'wp-job-manager' ), human_time_diff( get_post_timestamp(), time() ) );
+	// }
 }
 
 /**

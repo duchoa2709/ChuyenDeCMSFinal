@@ -22,7 +22,6 @@ global $post;
 $job_salary   = get_post_meta( get_the_ID(), '_job_salary', true );
 $job_featured = get_post_meta( get_the_ID(), '_featured', true );
 $company_name = get_post_meta( get_the_ID(), '_company_name', true );
-$company_name = get_post_meta( get_the_ID(), '_company_name', true );
 
 
 ?>
@@ -40,7 +39,7 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
     <div class="flex flex-col">
         <div class="flex">
             <div>
-                <figure class="company-logo">
+                <figure class="company-logo border border-gray-500">
 
                     <?php the_company_logo( 'thumbnail' ); ?>
                 </figure>
@@ -49,27 +48,27 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
                 <div class=" ">
                     <div>
                         <p class="text-base font-bold"><?php wpjm_the_job_title(); ?><br> <span
-                                class="text-[10px]  text-gray-400 font-normal ">Created. Oct 20,2022</span></p>
+                                class="text-[10px]  text-gray-400 font-normal ">Created. <?php echo get_the_job_publish_date(); ?></span></p>
                     </div>
                 </div>
-                <div class="w-fit bg-[#eeeeee] flex">
-                    <div class=" item flex h-6 items-center ">
+                <div class="w-fit bg-[#eeeeee] flex rounded">
+                    <div class=" item flex h-6 items-center px-2">
                         <div
-                            class="text-[10px]  justify-center flex items-center font-light  p-1 w-16   h-10  text-center">
+                            class="text-[10px]  justify-center flex items-center font-light  p-1 w-full h-10  text-center">
                             <p
-                                class="text-black border-gray-300 after:content-[''] after:w-[1px] after:h-[11px] after:bg-gray-300 after:absolute after:mt-[3px] after:ml-[13px] ">
-                                Fulltime</p>
+                                class="text-black border-gray-300 whitespace-nowrap">
+                                <?php echo get_the_company_name(); ?></p>
                         </div>
                         <div
-                            class="text-[10px]  justify-center flex items-center font-light  p-1 w-16  h-10  text-center">
+                            class="text-[10px]  justify-center flex items-center font-light  p-1 w-full  h-10  text-center">
                             <p
-                                class="text-black border-gray-300 after:content-[''] after:w-[1px] after:h-[11px] after:bg-gray-300 after:absolute after:mt-[3px] after:ml-[13px]">
-                                Fulltime</p>
+                                class="text-black border-gray-300 whitespace-nowrap border-x-[1px] px-3">
+                                <?php echo get_the_company_tagline(); ?></p>
                         </div>
-                        <div class="text-[10px] justify-center flex items-center font-light  p-1 w-16 h-10 text-center">
+                        <div class="text-[10px] justify-center flex items-center font-light  p-1 w-full h-10 text-center">
                             <p
-                                class=" text-black border-gray-300 after:content-[''] after:w-[0.75px] after:h-[11px] after:bg-gray-300 after:absolute after:mt-[3px] after:ml-[13px]">
-                                Fulltime</p>
+                                class=" text-black border-gray-300 whitespace-nowrap">
+                                <?php the_job_location( true ); ?></p>
                         </div>
 
                     </div>

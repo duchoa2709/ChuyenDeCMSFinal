@@ -14,7 +14,7 @@ function jobscout_widgets_init(){
             'description' => __( 'Default Sidebar', 'jobscout' ),
         ),
         'cta' => array(
-            'name'        => __( 'Call To Action Section', 'jobscout' ),
+            'name'        => __( 'Banner 2 Home', 'jobscout' ),
             'id'          => 'cta', 
             'description' => __( 'Add "Rara: Call To Action" widget for Call to Action section.', 'jobscout' ),
         ),
