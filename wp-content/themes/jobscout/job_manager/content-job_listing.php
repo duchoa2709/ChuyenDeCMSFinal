@@ -77,7 +77,7 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
         </div>
         <div class="p-1 ml-[10px]">
             <h1
-                class=" py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[9px] ">
+                class=" py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[10px]  before:-ml-[10px] ">
 
                 <?php 
 				do_action( 'job_listing_meta_start' ); 
@@ -91,14 +91,14 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 
             </h1>
             <h1
-                class="py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[9px]   text-xs  ">
+                class="py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[10px]   text-xs  ">
                 <div class="company-address">
                     <p class="text-xs text-black-300"><?php the_job_location( true ); ?> </p>
                 </div>
             </h1>
 
             <h1
-                class=" py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[9px]  text-black-300   ">
+                class=" py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[10px]  text-black-300   ">
                 <div class="company-address">
                     <p class="text-xs text-black-300"><?php the_job_publish_date(); ?> </p>
                 </div>
