@@ -21,7 +21,7 @@ if( $post_slug ){
 function getAllLocation(){
 	global $wpdb;
 
-	$meta_data = $wpdb->get_results("SELECT post_id, meta_key, meta_value FROM {$wpdb->postmeta}");
+	$meta_data = $wpdb->get_results("SELECT post_id, meta_key, meta_value FROM {$wpdb->postmeta} WHERE meta_value NOT LIKE '%San Carlos, CA%' ORDER BY meta_value DESC");
 	
 	if ($meta_data) {
 	   

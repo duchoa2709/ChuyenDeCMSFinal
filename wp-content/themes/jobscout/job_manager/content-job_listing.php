@@ -70,6 +70,7 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
                                 class=" text-black border-gray-300 whitespace-nowrap">
                                 <?php the_job_location( true ); ?></p>
                         </div>
+                        
 
                     </div>
                 </div>
@@ -101,6 +102,12 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
                 class=" py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[10px]  text-black-300   ">
                 <div class="company-address">
                     <p class="text-xs text-black-300"><?php the_job_publish_date(); ?> </p>
+                </div>
+            </h1>
+            <h1
+                class=" py-[3px] before:content-[''] before:w-1 before:h-1  before:bg-black before:absolute before:rounded-full before:mt-[7px]  before:-ml-[10px]  text-black-300   ">
+                <div class="company-address">
+                    <p class="text-xs text-black-300"> <?php echo get_the_company_tagline(); ?></p></p>
                 </div>
             </h1>
         </div>

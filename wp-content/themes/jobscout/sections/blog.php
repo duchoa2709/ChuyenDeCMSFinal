@@ -44,6 +44,13 @@ if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
            // if( $sub_title ) echo '<div class="section-desc">' . wpautop( wp_kses_post( $sub_title ) ) . '</div>';
        ?>
 
+<!-- 
+<?php
+        // $content = get_the_content();
+        // $first_character = mb_substr($content, 0, 1);
+        // echo $first_character;
+        ?> -->
+
 
         </div>
         <?php if( $qry->have_posts() ){ ?>
@@ -65,12 +72,16 @@ if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
                     </a>
                 </div>
                 <div class="h-full w-1/2 p-2 flex flex-col pl-5 ">
-                    <div>
-                        <h1 class="font-bold text-2xl mb-4"><?php the_title(); ?></h1>
-                        <div class="content_text text-base line-clamp-2">
-                            <?php the_content() ?>
-                        </div>
-                    </div>
+                <div>
+    <h1 class="font-bold text-2xl mb-4"><?php the_title(); ?>!</h1>
+    <div class="content_text text-base line-clamp-1">
+        <?php
+        $trimmed_content = wp_trim_words( get_the_content(), 1, '' );
+        echo $trimmed_content;
+        ?>
+    </div>
+</div>
+
                     <div class="text-[#eb8538] font-bold text-base mt-3 ">
                         <a href="<?php the_permalink(); ?>" href="">Read More</a>
                     </div>
