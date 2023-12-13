@@ -94,3 +94,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+define('WP_MAIL_FROM', 'hoaphd27.df@gmail.com');
+define('WP_MAIL_FROM_NAME', 'Duc Hoa');
+define('WP_MAIL_SMTP', 'smtp.example.com');
+define('WP_MAIL_SMTP_PORT', 465);
+define('WP_MAIL_SMTP_ENCRYPTION', 'ssl');
+define('WP_MAIL_SMTP_AUTH', true);
+define('WP_MAIL_SMTP_USER', 'hoaphd27.df@gmail.com');
+define('WP_MAIL_SMTP_PASSWORD', 'oarkuyuyjhvdpnot');
+define('WP_MAIL_SMTP_DEBUG', 0);
+define('WP_MAIL_SMTP_AUTO_TLS', false);
+define('WP_MAIL_SMTP_TIMEOUT', 5);
+define('WP_MAIL_SMTP_CHARSET', 'utf-8');
